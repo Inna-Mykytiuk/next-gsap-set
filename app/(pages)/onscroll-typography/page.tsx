@@ -4,8 +4,9 @@ import "./styles.css"
 
 const OnscrollTypography = () => {
   return (
-
-    <ScrollTypography />
+    <main className='main'>
+      <ScrollTypography />
+    </main>
 
   )
 }
