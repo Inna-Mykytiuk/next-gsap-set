@@ -4,7 +4,7 @@ import "./styles.css"
 
 const OnscrollTypography = () => {
   return (
-    <main className='main'>
+    <main className='main font-audiowide'>
       <ScrollTypography />
     </main>
 

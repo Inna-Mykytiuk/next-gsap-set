@@ -62,11 +62,11 @@ const ScrollTypography = () => {
         Scroll Down For The Typo Animation
       </p>
       <div className="flex flex-col w-screen relative px-8 py-6 mt-[1400px] mb-[100px]">
-        <h2 className="font-bold text-[8vw] leading-[0.8] text-center grid gap-8 text-black">
+        <p className="font-bold text-[8vw] leading-[0.8] text-center grid gap-8 text-black">
           <span className="uppercase target">Dream Big</span>
           <span className="uppercase target">Never Settle</span>
           <span className="uppercase target mb-[100px]">Never Quit</span>
-        </h2>
+        </p>
       </div>
 
       <div className="flex flex-col w-screen relative px-8 py-6 mb-[250px]">
