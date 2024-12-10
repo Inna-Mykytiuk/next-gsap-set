@@ -5,8 +5,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import Lenis from "@studio-freight/lenis";
+import { TextPlugin } from "gsap/TextPlugin";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 const ScrollTypography = () => {
 
@@ -14,9 +15,9 @@ const ScrollTypography = () => {
   useEffect(() => {
     // Розбиваємо текст на символи (chars)
     const text = new SplitType(".target", { types: "chars" });
-    const titleAn = new SplitType(".title", { types: "chars" });
+    // const titleAn = new SplitType(".title", { types: "chars" });
     const chars = text.chars as HTMLElement[];
-    const titleChars = titleAn.chars as HTMLElement[];
+    // const titleChars = titleAn.chars as HTMLElement[];
 
     // Ініціалізація плавного скролінгу
     const lenis = new Lenis({
@@ -35,32 +36,16 @@ const ScrollTypography = () => {
 
 
     //Title Animation
-    // gsap.set(titleChars, { opacity: 0 });
 
-    gsap.fromTo(titleChars, {
-      willChange: "opacity, transform",
-      opacity: 0,
-      yPercent: 130,
-    },
-      {
-        ease: "back.out(1.5)",
-        opacity: 1,
-        yPercent: 0,
-        stagger: 0.08,
-      }
-    )
-
-    //Text Animation
-    // gsap.set(".text", { opacity: 1 });
-
-    // gsap.from(".text", {
-    //   opacity: 0,
-    //   yPercent: 130,
-    //   stagger: 0.05,
-    //   ease: "back.out",
-    //   duration: 0.9,
-    // })
-
+    gsap.to(".title", {
+      duration: 2,
+      text: "Masters of Stealth and Precision",
+      ease: "power1.out",
+      repeat: 2, // number of repeats (-1 for infinite)
+      repeatDelay: 1, // seconds between repeats
+      repeatRefresh: true, // invalidates on each repeat
+      yoyo: true,
+    });
 
 
     chars.forEach((char) => {
@@ -68,7 +53,6 @@ const ScrollTypography = () => {
         gsap.set(char.parentNode, { perspective: 1000 });
       }
     });
-
 
 
     // Анімація для кожної літери
@@ -99,12 +83,12 @@ const ScrollTypography = () => {
       <section className="w-full bg-snakeBg bg-cover bg-no-repeat font-audi text-[#e5a52a]">
         <div className="container">
           <div className="w-full h-[100vh] flex flex-col items-start pt-[180px]">
-            <h1 className="max-w-[900px] font-bold text-[80px] leading-tight mb-[40px] title">Masters of Stealth and Precision</h1>
-            <p className="max-w-[500px] text-base leading-normal mr-auto text">
+            <h1 className="max-w-[900px] font-bold text-[80px] leading-tight mb-[40px] title">Wizards of Discretion and Precision</h1>
+            {/* <p className="max-w-[500px] text-base leading-normal mr-auto text">
               Slither into the enigmatic world of snakes, where limbless
               wonders navigate silently, employing lethal tactics and serving
               as guardians of ecological balance.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -120,12 +104,6 @@ const ScrollTypography = () => {
           </div>
 
           <div className="flex flex-col relative px-8 py-6 justify-center items-center gap-6 text-[#e5a52a]">
-            <p className="max-w-[600px] text-base leading-normal">
-              Dreaming big inspires us to reach beyond our current circumstances, to
-              imagine a future that exceeds our present reality. It&apos;s about setting
-              audacious goals and believing in our ability to achieve them, regardless of
-              the obstacles we may face along the way.
-            </p>
             <p className="max-w-[600px] text-base leading-normal">
               Dreaming big inspires us to reach beyond our current circumstances, to
               imagine a future that exceeds our present reality. It&apos;s about setting
