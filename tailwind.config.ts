@@ -30,13 +30,8 @@ export default {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        cardOverlay:
-          "linear-gradient(180deg, rgba(0, 0, 0, 0.65) 15.4%, rgba(0, 0, 0, 0.39) 23.9%, rgba(0, 0, 0, 0.00) 34.4%)",
-        checkmark: `url(/icons/checkmark.svg)`,
+        snakeBg: `url(/images/snakeHero.png)`,
         backdrop: `linear-gradient(rgba(41, 41, 41, 0.40),rgba(41, 41, 41, 0.40))`,
-        gradient: `linear-gradient(90deg, #9ea7fc 0%, #65b6f7 100%)`,
-        backlog:
-          "linear-gradient(#f6f8fc, #f6f8fc), radial-gradient(circle at top left, #c781ff, #e57373)",
       },
       boxShadow: {
         shadow: "0px 10px 24px -15px rgba(0, 0, 0, 0.5)",
@@ -46,6 +41,10 @@ export default {
 
       fontFamily: {
         roboto: ["var(--font-roboto)"],
+        audi: ["Audiowide", "sans-serif"],
+        ephesis: ["Ephesis", "cursive"],
+        arvo: ["Arvo", "sans-serif"],
+        dancing: ["Dancing Script", "cursive"],
       },
       colors: {
         mainColor: "#707090",

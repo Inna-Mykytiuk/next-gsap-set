@@ -9,6 +9,8 @@ import Lenis from "@studio-freight/lenis";
 gsap.registerPlugin(ScrollTrigger);
 
 const ScrollTypography = () => {
+
+  //GSAP ANIMATION  
   useEffect(() => {
     // Розбиваємо текст на символи (chars)
     const text = new SplitType(".target", { types: "chars" });
@@ -29,7 +31,6 @@ const ScrollTypography = () => {
 
     requestAnimationFrame(scrollFn);
 
-    // Додаємо перспективу до контейнерів символів
     chars.forEach((char) => {
       if (char.parentNode) {
         gsap.set(char.parentNode, { perspective: 1000 });
@@ -43,14 +44,12 @@ const ScrollTypography = () => {
         willChange: "opacity, transform",
         opacity: 0,
         z: -600,
-        // rotateX: -90, // Додатковий ефект обертання
       },
       {
         ease: "back.out(1.5)",
         opacity: 1,
         z: 0,
-        // rotateX: 0,
-        stagger: 0.04, // Регулюємо інтервал між літерами
+        stagger: 0.04,
         scrollTrigger: {
           trigger: ".target",
           start: "top bottom",
@@ -62,56 +61,38 @@ const ScrollTypography = () => {
   }, []);
 
   return (
-    <section className="w-full">
-      <div className="container">
-        <div className="w-full h-[100vh] flex  justify-center items-center uppercase text-4xl text-black">
-          <div>
-            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
-              Dreaming big inspires us to reach beyond our current circumstances, to
-              imagine a future that exceeds our present reality. It&apos;s about setting
-              audacious goals and believing in our ability to achieve them, regardless of
-              the obstacles we may face along the way.
-            </p>
-            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
-              Dreaming big inspires us to reach beyond our current circumstances, to
-              imagine a future that exceeds our present reality. It&apos;s about setting
-              audacious goals and believing in our ability to achieve them, regardless of
-              the obstacles we may face along the way.
-            </p>
-          </div>
-          <div>
-            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
-              Dreaming big inspires us to reach beyond our current circumstances, to
-              imagine a future that exceeds our present reality. It&apos;s about setting
-              audacious goals and believing in our ability to achieve them, regardless of
-              the obstacles we may face along the way.
-            </p>
-            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
-              Dreaming big inspires us to reach beyond our current circumstances, to
-              imagine a future that exceeds our present reality. It&apos;s about setting
-              audacious goals and believing in our ability to achieve them, regardless of
-              the obstacles we may face along the way.
+    <>
+      <section className="w-full bg-snakeBg bg-cover bg-no-repeat font-audi text-[#e5a52a]">
+        <div className="container">
+          <div className="w-full h-[100vh] flex flex-col items-start pt-[180px]">
+            <h1 className="max-w-[900px]  font-bold text-[80px] leading-tight mb-[40px]">Masters of Stealth and Precision</h1>
+            <p className="max-w-[500px] text-base leading-normal  mr-auto">
+              Slither into the enigmatic world of snakes, where limbless
+              wonders navigate silently, employing lethal tactics and serving
+              as guardians of ecological balance.
             </p>
           </div>
         </div>
+      </section>
 
-        <div>
-          <div className="flex flex-col relative px-8 py-6 ">
-            <p className="font-bold text-[8vw] leading-[0.8] text-center grid gap-8 text-black">
+      <section className="bg-[#06090d]  font-audi w-full h-[100vh] flex flex-col">
+        <div className="container">
+          <div className="flex flex-col relative px-8 py-6 text-[#e5a52a] pt-[100px]">
+            <p className="font-bold text-[5.5vw] leading-[0.8] text-center grid gap-8">
               <span className="uppercase target">Dream Big</span>
               <span className="uppercase target">Never Settle</span>
               <span className="uppercase target mb-[100px]">Never Quit</span>
             </p>
           </div>
 
-          <div className="flex flex-col relative px-8 py-6 mb-[250px]">
-            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
+          <div className="flex flex-col relative px-8 py-6 justify-center items-center gap-6 text-[#e5a52a]">
+            <p className="max-w-[600px] text-base leading-normal">
               Dreaming big inspires us to reach beyond our current circumstances, to
               imagine a future that exceeds our present reality. It&apos;s about setting
               audacious goals and believing in our ability to achieve them, regardless of
               the obstacles we may face along the way.
             </p>
-            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
+            <p className="max-w-[600px] text-base leading-normal">
               Dreaming big inspires us to reach beyond our current circumstances, to
               imagine a future that exceeds our present reality. It&apos;s about setting
               audacious goals and believing in our ability to achieve them, regardless of
@@ -119,8 +100,8 @@ const ScrollTypography = () => {
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
