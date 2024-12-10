@@ -41,9 +41,9 @@ const ScrollTypography = () => {
       duration: 2,
       text: "Masters of Stealth and Precision",
       ease: "power1.out",
-      repeat: 2, // number of repeats (-1 for infinite)
-      repeatDelay: 1, // seconds between repeats
-      repeatRefresh: true, // invalidates on each repeat
+      repeat: 2,
+      repeatDelay: 1,
+      repeatRefresh: true,
       yoyo: true,
     });
 
@@ -82,8 +82,8 @@ const ScrollTypography = () => {
     <>
       <section className="w-full bg-snakeBg bg-cover bg-no-repeat font-audi text-[#e5a52a]">
         <div className="container">
-          <div className="w-full h-[100vh] flex flex-col items-start pt-[180px]">
-            <h1 className="max-w-[900px] font-bold text-[80px] leading-tight mb-[40px] title">Wizards of Discretion and Precision</h1>
+          <div className="w-full h-[100vh] flex flex-col items-center md:items-start pt-[100px] xl:pt-[180px] justify-center md:justify-start">
+            <div className="max-w-[800px] text-center md:text-start font-bold text-[40px] sm:text-[60px] md:text-[80px] leading-tight mb-[40px] title">Wizards of Discretion and Precision</div>
             {/* <p className="max-w-[500px] text-base leading-normal mr-auto text">
               Slither into the enigmatic world of snakes, where limbless
               wonders navigate silently, employing lethal tactics and serving
@@ -95,11 +95,11 @@ const ScrollTypography = () => {
 
       <section className="bg-[#06090d]  font-audi w-full h-[100vh] flex flex-col">
         <div className="container">
-          <div className="flex flex-col relative px-8 py-6 text-[#e5a52a] pt-[100px]">
+          <div className="flex flex-col relative px-8 py-6 text-[#e5a52a] pt-[100px] mb-[40px] xl:mb-[100px]">
             <p className="font-bold text-[5.5vw] leading-[0.8] text-center grid gap-8">
               <span className="uppercase target">Dream Big</span>
               <span className="uppercase target">Never Settle</span>
-              <span className="uppercase target mb-[100px]">Never Quit</span>
+              <span className="uppercase target ">Never Quit</span>
             </p>
           </div>
 
