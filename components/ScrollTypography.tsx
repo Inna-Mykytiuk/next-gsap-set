@@ -14,7 +14,9 @@ const ScrollTypography = () => {
   useEffect(() => {
     // Розбиваємо текст на символи (chars)
     const text = new SplitType(".target", { types: "chars" });
+    const titleAn = new SplitType(".title", { types: "chars" });
     const chars = text.chars as HTMLElement[];
+    const titleChars = titleAn.chars as HTMLElement[];
 
     // Ініціалізація плавного скролінгу
     const lenis = new Lenis({
@@ -31,11 +33,43 @@ const ScrollTypography = () => {
 
     requestAnimationFrame(scrollFn);
 
+
+    //Title Animation
+    // gsap.set(titleChars, { opacity: 0 });
+
+    gsap.fromTo(titleChars, {
+      willChange: "opacity, transform",
+      opacity: 0,
+      yPercent: 130,
+    },
+      {
+        ease: "back.out(1.5)",
+        opacity: 1,
+        yPercent: 0,
+        stagger: 0.08,
+      }
+    )
+
+    //Text Animation
+    // gsap.set(".text", { opacity: 1 });
+
+    // gsap.from(".text", {
+    //   opacity: 0,
+    //   yPercent: 130,
+    //   stagger: 0.05,
+    //   ease: "back.out",
+    //   duration: 0.9,
+    // })
+
+
+
     chars.forEach((char) => {
       if (char.parentNode) {
         gsap.set(char.parentNode, { perspective: 1000 });
       }
     });
+
+
 
     // Анімація для кожної літери
     gsap.fromTo(
@@ -65,8 +99,8 @@ const ScrollTypography = () => {
       <section className="w-full bg-snakeBg bg-cover bg-no-repeat font-audi text-[#e5a52a]">
         <div className="container">
           <div className="w-full h-[100vh] flex flex-col items-start pt-[180px]">
-            <h1 className="max-w-[900px]  font-bold text-[80px] leading-tight mb-[40px]">Masters of Stealth and Precision</h1>
-            <p className="max-w-[500px] text-base leading-normal  mr-auto">
+            <h1 className="max-w-[900px] font-bold text-[80px] leading-tight mb-[40px] title">Masters of Stealth and Precision</h1>
+            <p className="max-w-[500px] text-base leading-normal mr-auto text">
               Slither into the enigmatic world of snakes, where limbless
               wonders navigate silently, employing lethal tactics and serving
               as guardians of ecological balance.
