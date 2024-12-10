@@ -10,11 +10,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ScrollTypography = () => {
   useEffect(() => {
-    // Розбиваємо текст на слова за класом .target
-    const text = new SplitType(".target");
-    //Анімація буде примінятися до кожної букви
-    // const text = new SplitType(".target", { types: "words" });
-    const words = text.words as HTMLElement[];
+    // Розбиваємо текст на символи (chars)
+    const text = new SplitType(".target", { types: "chars" });
+    const chars = text.chars as HTMLElement[];
 
     // Ініціалізація плавного скролінгу
     const lenis = new Lenis({
@@ -31,21 +29,28 @@ const ScrollTypography = () => {
 
     requestAnimationFrame(scrollFn);
 
-    // Анімація слів
-    words.forEach((word) => gsap.set(word.parentNode, { perspective: 1000 }));
+    // Додаємо перспективу до контейнерів символів
+    chars.forEach((char) => {
+      if (char.parentNode) {
+        gsap.set(char.parentNode, { perspective: 1000 });
+      }
+    });
 
+    // Анімація для кожної літери
     gsap.fromTo(
-      words,
+      chars,
       {
         willChange: "opacity, transform",
         opacity: 0,
         z: -600,
+        // rotateX: -90, // Додатковий ефект обертання
       },
       {
         ease: "back.out(1.5)",
         opacity: 1,
         z: 0,
-        stagger: 0.2,
+        // rotateX: 0,
+        stagger: 0.04, // Регулюємо інтервал між літерами
         scrollTrigger: {
           trigger: ".target",
           start: "top bottom",
@@ -57,27 +62,65 @@ const ScrollTypography = () => {
   }, []);
 
   return (
-    <div>
-      <p className="absolute top-0 w-full h-screen flex justify-center items-center uppercase text-4xl text-black">
-        Scroll Down For The Typo Animation
-      </p>
-      <div className="flex flex-col w-screen relative px-8 py-6 mt-[1400px] mb-[100px]">
-        <p className="font-bold text-[8vw] leading-[0.8] text-center grid gap-8 text-black">
-          <span className="uppercase target">Dream Big</span>
-          <span className="uppercase target">Never Settle</span>
-          <span className="uppercase target mb-[100px]">Never Quit</span>
-        </p>
-      </div>
+    <section className="w-full">
+      <div className="container">
+        <div className="w-full h-[100vh] flex  justify-center items-center uppercase text-4xl text-black">
+          <div>
+            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
+              Dreaming big inspires us to reach beyond our current circumstances, to
+              imagine a future that exceeds our present reality. It&apos;s about setting
+              audacious goals and believing in our ability to achieve them, regardless of
+              the obstacles we may face along the way.
+            </p>
+            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
+              Dreaming big inspires us to reach beyond our current circumstances, to
+              imagine a future that exceeds our present reality. It&apos;s about setting
+              audacious goals and believing in our ability to achieve them, regardless of
+              the obstacles we may face along the way.
+            </p>
+          </div>
+          <div>
+            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
+              Dreaming big inspires us to reach beyond our current circumstances, to
+              imagine a future that exceeds our present reality. It&apos;s about setting
+              audacious goals and believing in our ability to achieve them, regardless of
+              the obstacles we may face along the way.
+            </p>
+            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
+              Dreaming big inspires us to reach beyond our current circumstances, to
+              imagine a future that exceeds our present reality. It&apos;s about setting
+              audacious goals and believing in our ability to achieve them, regardless of
+              the obstacles we may face along the way.
+            </p>
+          </div>
+        </div>
 
-      <div className="flex flex-col w-screen relative px-8 py-6 mb-[250px]">
-        <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
-          Dreaming big inspires us to reach beyond our current circumstances, to
-          imagine a future that exceeds our present reality. It&apos;s about setting
-          audacious goals and believing in our ability to achieve them, regardless of
-          the obstacles we may face along the way.
-        </p>
+        <div>
+          <div className="flex flex-col relative px-8 py-6 ">
+            <p className="font-bold text-[8vw] leading-[0.8] text-center grid gap-8 text-black">
+              <span className="uppercase target">Dream Big</span>
+              <span className="uppercase target">Never Settle</span>
+              <span className="uppercase target mb-[100px]">Never Quit</span>
+            </p>
+          </div>
+
+          <div className="flex flex-col relative px-8 py-6 mb-[250px]">
+            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
+              Dreaming big inspires us to reach beyond our current circumstances, to
+              imagine a future that exceeds our present reality. It&apos;s about setting
+              audacious goals and believing in our ability to achieve them, regardless of
+              the obstacles we may face along the way.
+            </p>
+            <p className="max-w-[600px] mx-auto my-6 text-[1.25rem] leading-normal text-black">
+              Dreaming big inspires us to reach beyond our current circumstances, to
+              imagine a future that exceeds our present reality. It&apos;s about setting
+              audacious goals and believing in our ability to achieve them, regardless of
+              the obstacles we may face along the way.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
