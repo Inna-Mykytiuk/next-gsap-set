@@ -6,6 +6,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import Lenis from "@studio-freight/lenis";
 import { TextPlugin } from "gsap/TextPlugin";
+import splitStringUsingRegex from "@/utils/splitStrUsingRegex";
+
+import { motion } from 'framer-motion';
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -35,17 +38,17 @@ const ScrollTypography = () => {
     requestAnimationFrame(scrollFn);
 
 
-    //Title Animation
+    //Title Animation GSAP
 
-    gsap.to(".title", {
-      duration: 2,
-      text: "Masters of Stealth and Precision",
-      ease: "power1.out",
-      repeat: 2,
-      repeatDelay: 1,
-      repeatRefresh: true,
-      yoyo: true,
-    });
+    // gsap.to(".title", {
+    //   duration: 2,
+    //   text: "Masters of Stealth and Precision",
+    //   ease: "power1.out",
+    //   repeat: 2,
+    //   repeatDelay: 1,
+    //   repeatRefresh: true,
+    //   yoyo: true,
+    // });
 
 
     chars.forEach((char) => {
@@ -78,12 +81,36 @@ const ScrollTypography = () => {
     );
   }, []);
 
+  const charVariants = {
+    hidden: { opacity: 0 },
+    reveal: { opacity: 1 }
+  }
+
+
+  //Title ANIMATION
+  const heading = "Wizards of Discretion and Precision";
+  const headingSplitting = splitStringUsingRegex(heading);
+
+
   return (
     <>
       <section className="w-full bg-snakeBg bg-cover bg-no-repeat font-audi text-[#e5a52a]">
         <div className="container">
           <div className="w-full h-[100vh] flex flex-col items-center md:items-start pt-[100px] xl:pt-[180px] justify-center md:justify-start">
-            <div className="max-w-[800px] text-center md:text-start font-bold text-[40px] sm:text-[60px] md:text-[80px] leading-tight mb-[40px] title">Wizards of Discretion and Precision</div>
+            {/* <div className="max-w-[800px] xl:max-w-[1000px] text-center md:text-start font-bold text-[40px] sm:text-[60px] md:text-[80px] leading-tight mb-[40px] title">Wizards of Discretion and Precision</div> */}
+            <motion.p
+              initial="hidden"
+              whileInView="reveal"
+              transition={{ staggerChildren: 0.1 }}
+              className="max-w-[800px] xl:max-w-[1000px] text-center md:text-start font-bold text-[40px] sm:text-[60px] xl:text-[60px] leading-tight mb-[40px] title">
+              {headingSplitting.map((char, index) => (
+                <motion.span key={index} transition={{ duration: 1.5 }} variants={charVariants}>
+                  {char}
+                </motion.span>
+              ))}
+            </motion.p>
+
+            {/*Text */}
             {/* <p className="max-w-[500px] text-base leading-normal mr-auto text">
               Slither into the enigmatic world of snakes, where limbless
               wonders navigate silently, employing lethal tactics and serving
