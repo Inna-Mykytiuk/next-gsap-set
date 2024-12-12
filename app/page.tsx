@@ -2,8 +2,13 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="container">
-      <Link href="/onscroll-typography">Onscroll Typography</Link>
-    </div>
+    <section className="w-full h-screen ">
+      <div className="container">
+        <div className="flex flex-col justify-center items-center w-full h-screen">
+          <Link href="/onscroll-typography">Onscroll Typography</Link>
+          <Link href="/introductory">GSAP ScrollTrigger Page</Link>
+        </div>
+      </div>
+    </section>
   );
 }

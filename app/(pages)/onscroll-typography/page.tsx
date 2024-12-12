@@ -1,7 +1,7 @@
 import React from 'react'
 import ScrollTypography from '@/components/ScrollTypography';
 
-const OnscrollTypography = () => {
+const OnscrollTypographyPage = () => {
   return (
     <main className='main font-audiowide'>
       <ScrollTypography />
@@ -10,4 +10,4 @@ const OnscrollTypography = () => {
   )
 }
 
-export default OnscrollTypography;
+export default OnscrollTypographyPage;
