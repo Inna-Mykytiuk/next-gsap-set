@@ -38,9 +38,7 @@ const IntroductoryHero = () => {
       .to(containerRef.current, {
         y: 400
       }, 'a')
-
-  })
-
+  });
 
 
   return (
@@ -53,12 +51,25 @@ const IntroductoryHero = () => {
         Wonderful Tattoo
       </h1>
       <div className='w-full sm:w-[460px] h-[620px] xxl:w-[700px] xxl:h-[820px] bg-[#858480] rounded-t-full absolute bottom-0 z-10' />
+      {/* <Image
+        ref={leafRef}
+        priority
+        style={leafStyle}
+        src="/images/plant.png" alt="plant" width={1440} height={500} className='hidden md:block absolute bottom-0 z-0 xxl:w-[1440px] object-cover object-center' /> */}
+
       <Image
         ref={leafRef}
         priority
-        src="/images/plant.png" alt="plant" width={1440} height={500} className='hidden md:block absolute bottom-0 w-auto z-0 xxl:w-[1440px] h-auto object-cover object-center fill' />
+        style={{ objectFit: 'cover' }}
+        src="/images/plant.png"
+        alt="plant"
+        width={1400}
+        height={700}
+        className='hidden md:block absolute bottom-0 z-0 xxl:w-[1400px] object-cover object-center'
+      />
       <Image
         ref={girlRef}
+        priority
         src="/images/girl5.png" alt="plant" width={560} height={640} className='absolute bottom-[-20px] z-20 w-auto h-auto object-cover object-center' />
     </div>
   )
