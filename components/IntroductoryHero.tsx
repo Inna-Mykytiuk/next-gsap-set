@@ -49,16 +49,17 @@ const IntroductoryHero = () => {
       className='flex flex-col justify-center items-center min-h-screen relative overflow-hidden'>
       <h1
         ref={textRef}
-        className='uppercase text-[6rem] md:text-[8rem] font-agu xxl:text-[10rem] text-white absolute top-[10rem] z-20'>
+        className='uppercase text-4xl text-center md:text-[80px] font-agu xxl:text-[10rem] text-gray-300 absolute top-[60px] md:top-[6rem] xl:top-[10rem]  z-20 leading-[1]'>
         Wonderful Tattoo
       </h1>
-      <div className='w-[500px] h-[620px] xxl:w-[700px] xxl:h-[820px] bg-[#858480] rounded-t-full absolute bottom-0 z-10' />
+      <div className='w-full sm:w-[460px] h-[620px] xxl:w-[700px] xxl:h-[820px] bg-[#858480] rounded-t-full absolute bottom-0 z-10' />
       <Image
         ref={leafRef}
-        src="/images/plant.png" alt="plant" width={1440} height={500} className='absolute bottom-0 w-[1200px] z-0 xxl:w-[1440px]' />
+        priority
+        src="/images/plant.png" alt="plant" width={1440} height={500} className='hidden md:block absolute bottom-0 w-auto z-0 xxl:w-[1440px] h-auto object-cover object-center fill' />
       <Image
         ref={girlRef}
-        src="/images/girl5.png" alt="plant" width={560} height={640} className='absolute bottom-[-20px] w-[420px] z-20 xxl:w-[560px]' />
+        src="/images/girl5.png" alt="plant" width={560} height={640} className='absolute bottom-[-20px] z-20 w-auto h-auto object-cover object-center' />
     </div>
   )
 }
