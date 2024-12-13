@@ -34,6 +34,8 @@ export default {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         snakeBg: `url(/images/snakeHero.png)`,
         backdrop: `linear-gradient(rgba(41, 41, 41, 0.40),rgba(41, 41, 41, 0.40))`,
+        "radial-gray":
+          "radial-gradient(circle farthest-side at center, hsl(0, 0%, 30%) 0%, hsl(0, 0%, 14%) 100%)",
       },
       boxShadow: {
         shadow: "0px 10px 24px -15px rgba(0, 0, 0, 0.5)",
@@ -47,6 +49,7 @@ export default {
         ephesis: ["Ephesis", "cursive"],
         arvo: ["Arvo", "sans-serif"],
         dancing: ["Dancing Script", "cursive"],
+        agu: ["Agu Display", "serif"],
       },
       colors: {
         mainColor: "#707090",
@@ -54,6 +57,8 @@ export default {
         mainBcg: "#888fdc",
         sectionBcg: "#cad9f0",
         warning: "#f87171",
+        "dark-gray": "hsl(0, 0%, 14%)",
+        "darker-gray": "hsl(0, 0%, 30%)",
       },
     },
   },
