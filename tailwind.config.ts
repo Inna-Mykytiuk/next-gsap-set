@@ -32,7 +32,7 @@ export default {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        snakeBg: `url(/images/snakeHero.png)`,
+        snakeBg: `url(/images/snakeHero.webp)`,
         backdrop: `linear-gradient(rgba(41, 41, 41, 0.40),rgba(41, 41, 41, 0.40))`,
         "radial-gray":
           "radial-gradient(circle farthest-side at center, hsl(0, 0%, 30%) 0%, hsl(0, 0%, 14%) 100%)",
