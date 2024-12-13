@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import plant from "../public/images/plant.png";
-import girl from "../public/images/girl3.png";
+import plant from "/images/plant.png";
+import girl from "/images/girl3.png";
 
 const IntroductorySection = () => {
   return (
