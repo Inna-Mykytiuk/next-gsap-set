@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-// import Lenis from "@studio-freight/lenis";
 import splitStringUsingRegex from "@/utils/splitStrUsingRegex";
 
 import { motion } from 'framer-motion';
@@ -94,7 +93,6 @@ const ScrollTypography = () => {
       <section className="w-full bg-snakeBg bg-cover bg-no-repeat font-audi text-[#e5a52a]">
         <div className="container">
           <div className="w-full h-[100vh] flex flex-col items-center md:items-start pt-[100px] xl:pt-[180px] justify-center md:justify-start">
-            {/* <div className="max-w-[800px] xl:max-w-[1000px] text-center md:text-start font-bold text-[40px] sm:text-[60px] md:text-[80px] leading-tight mb-[40px] title">Wizards of Discretion and Precision</div> */}
             <motion.p
               initial="hidden"
               whileInView="reveal"

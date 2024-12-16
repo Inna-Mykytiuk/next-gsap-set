@@ -1,10 +1,10 @@
 import InfiniteScrollSection from '@/section/InfinitScrollSection';
 
 
-const IntroductoryPage = () => {
+const InfiniteScrollPage = () => {
   return (
     <InfiniteScrollSection />
   )
 }
 
-export default IntroductoryPage;
+export default InfiniteScrollPage;

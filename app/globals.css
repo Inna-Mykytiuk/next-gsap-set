@@ -8,7 +8,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* color: white; */
 }
 
 /* chrome */
@@ -19,13 +18,14 @@
 /* firefox */
 /* html {
   scrollbar-width: none;
-} */
+}
 
-/* .no-scrollbar::-webkit-scrollbar {
+.no-scrollbar::-webkit-scrollbar {
   display: none;
 } */
+
 @layer components {
   .wrap {
-    @apply h-[50vh] mt-[17.5vh] grid grid-flow-col auto-cols-[23.5vw] gap-[2vw];
+    @apply grid grid-flow-col gap-[2vw] w-min mt-[18vh] h-[50vh] auto-cols-[70vw] md:auto-cols-[30vw] xl:auto-cols-[18vw];
   }
 }

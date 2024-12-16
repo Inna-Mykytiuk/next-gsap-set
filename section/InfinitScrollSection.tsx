@@ -42,12 +42,12 @@ const InfiniteScrollSection: React.FC = () => {
 
 
   return (
-    <section>
+    <section className='w-full min-h-screen'>
       <div className='container'>
-        <h1 className="fixed top-[10%] flex my-auto justify-center text-3xl md:text-5xl text-black/60 text-center font-bold ">
+        {/* <h1 className="fixed top-[8%] left-1/2 transform -translate-x-1/2 text-3xl md:text-5xl text-black/60 text-center font-bold">
           Horizontal Infinite Scroll
-        </h1>
-        <div className="w-min flex gap-4">
+        </h1> */}
+        <div className="w-min flex gap-4 overflow-hidden">
           <div className="wrap">
             {portraits.map((portrait, index) => (
               <Image
@@ -56,8 +56,7 @@ const InfiniteScrollSection: React.FC = () => {
                 alt={`Portrait ${portrait.id}`}
                 width={560}
                 height={640}
-
-                className="h-[100%] min-w-[100%] w-[100%] object-cover object-center rounded-[2rem]"
+                className="h-[100%] min-w-[100%] w-[100%] md:w-[300px] object-cover object-center rounded-[2rem]"
               />
             ))}
           </div>

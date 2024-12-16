@@ -51,11 +51,6 @@ const IntroductoryHero = () => {
         Wonderful Tattoo
       </h1>
       <div className='w-full sm:w-[460px] h-[620px] xxl:w-[700px] xxl:h-[820px] bg-[#858480] rounded-t-full absolute bottom-0 z-10' />
-      {/* <Image
-        ref={leafRef}
-        priority
-        style={leafStyle}
-        src="/images/plant.png" alt="plant" width={1440} height={500} className='hidden md:block absolute bottom-0 z-0 xxl:w-[1440px] object-cover object-center' /> */}
       <Image
         ref={leafRef}
         priority
