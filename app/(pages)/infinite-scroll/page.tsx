@@ -1,11 +1,11 @@
 import SmoothScrollWrapper from '@/components/SmoothScrollWrapper';
-import InfinitScrollSection from '@/section/InfinitScrollSection';
+import InfiniteScrollSection from '@/section/InfinitScrollSection';
 
 
 const IntroductoryPage = () => {
   return (
     <SmoothScrollWrapper>
-      <InfinitScrollSection />
+      <InfiniteScrollSection />
     </SmoothScrollWrapper>
   )
 }
