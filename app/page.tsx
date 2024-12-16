@@ -6,7 +6,8 @@ export default function Home() {
       <div className="container">
         <div className="flex flex-col justify-center items-center w-full h-screen">
           <Link href="/onscroll-typography">Onscroll Typography</Link>
-          <Link href="/introductory">GSAP ScrollTrigger Page</Link>
+          <Link href="/introductory">GSAP ScrollTrigger</Link>
+          <Link href="/infinit-scroll">Infinit Scroll</Link>
         </div>
       </div>
     </section>
