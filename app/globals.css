@@ -24,12 +24,8 @@
 /* .no-scrollbar::-webkit-scrollbar {
   display: none;
 } */
-.wrap {
-  height: 50vh;
-  margin-top: 17.5vh;
-  display: grid;
-  grid-auto-columns: 23.5vw;
-  grid-auto-flow: column;
-  width: min-content;
-  gap: 2vw;
+@layer components {
+  .wrap {
+    @apply h-[50vh] mt-[17.5vh] grid grid-flow-col auto-cols-[23.5vw] gap-[2vw];
+  }
 }

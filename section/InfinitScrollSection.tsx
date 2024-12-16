@@ -6,15 +6,6 @@ import Lenis from "@studio-freight/lenis";
 import Image from 'next/image';
 import { portraits } from '@/data/horizScrollData';
 
-// const portraits = [
-//   { id: 1, src: "/images/portraits/p1.png" },
-//   { id: 2, src: "/images/portraits/p2.png" },
-//   { id: 3, src: "/images/portraits/p3.png" },
-//   { id: 4, src: "/images/portraits/p4.png" },
-//   { id: 5, src: "/images/portraits/p5.png" },
-//   { id: 6, src: "/images/portraits/p6.png" },
-// ];
-
 const InfiniteScrollSection: React.FC = () => {
 
   useEffect(() => {
