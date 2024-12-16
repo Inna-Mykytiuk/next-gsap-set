@@ -4,13 +4,12 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
-import Lenis from "@studio-freight/lenis";
-import { TextPlugin } from "gsap/TextPlugin";
+// import Lenis from "@studio-freight/lenis";
 import splitStringUsingRegex from "@/utils/splitStrUsingRegex";
 
 import { motion } from 'framer-motion';
 
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 const ScrollTypography = () => {
 
@@ -22,20 +21,19 @@ const ScrollTypography = () => {
     const chars = text.chars as HTMLElement[];
     // const titleChars = titleAn.chars as HTMLElement[];
 
-    // Ініціалізація плавного скролінгу
-    const lenis = new Lenis({
-      lerp: 0.2,
-      smoothWheel: true,
-    });
+    // Ініціалізація плавного скролінгу/але краще створити окремий обгортаючий компонент і використовувати на кожній сторінці, щоб не дублювати код!!
+    // const lenis = new Lenis({
+    //   lerp: 0.2,
+    //   smoothWheel: true,
+    // });
 
-    lenis.on("scroll", () => ScrollTrigger.update());
+    // lenis.on("scroll", () => ScrollTrigger.update());
 
-    const scrollFn = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(scrollFn);
-    };
-
-    requestAnimationFrame(scrollFn);
+    // const scrollFn = (time: number) => {
+    //   lenis.raf(time);
+    //   requestAnimationFrame(scrollFn);
+    // };
+    // requestAnimationFrame(scrollFn);
 
 
     //Title Animation GSAP
@@ -85,7 +83,6 @@ const ScrollTypography = () => {
     hidden: { opacity: 0 },
     reveal: { opacity: 1 }
   }
-
 
   //Title ANIMATION
   const heading = "Wizards of Discretion and Precision";

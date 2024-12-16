@@ -56,7 +56,6 @@ const IntroductoryHero = () => {
         priority
         style={leafStyle}
         src="/images/plant.png" alt="plant" width={1440} height={500} className='hidden md:block absolute bottom-0 z-0 xxl:w-[1440px] object-cover object-center' /> */}
-
       <Image
         ref={leafRef}
         priority
