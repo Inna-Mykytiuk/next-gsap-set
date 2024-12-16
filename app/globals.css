@@ -3,3 +3,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* color: white; */
+}
+
+/* chrome */
+/* html::-webkit-scrollbar {
+  display: none;
+} */
+
+/* firefox */
+/* html {
+  scrollbar-width: none;
+} */
+
+/* .no-scrollbar::-webkit-scrollbar {
+  display: none;
+} */
+.wrap {
+  height: 50vh;
+  margin-top: 17.5vh;
+  display: grid;
+  grid-auto-columns: 23.5vw;
+  grid-auto-flow: column;
+  width: min-content;
+  gap: 2vw;
+}
