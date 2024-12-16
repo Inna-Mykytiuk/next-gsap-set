@@ -69,7 +69,7 @@ const IntroductoryHero = () => {
       <Image
         ref={girlRef}
         priority
-        src="/images/girl5.png" alt="plant" width={560} height={640} className='absolute bottom-[-20px] z-20 w-auto h-auto object-cover object-center' />
+        src="/images/girl5.png" alt="girl" width={560} height={640} className='absolute bottom-[-20px] z-20 w-auto max-h-full md:max-h-[700px] xxl:max-h-full object-cover object-center' />
     </div>
   )
 }
