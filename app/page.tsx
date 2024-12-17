@@ -8,6 +8,7 @@ export default function Home() {
           <Link href="/onscroll-typography">Onscroll Typography</Link>
           <Link href="/introductory">GSAP ScrollTrigger</Link>
           <Link href="/infinite-scroll">Horizontal Infinite Scroll</Link>
+          <Link href="/accordion">Accordion</Link>
         </div>
       </div>
     </section>

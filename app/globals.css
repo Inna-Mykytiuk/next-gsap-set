@@ -10,6 +10,11 @@
   box-sizing: border-box;
 }
 
+.animation {
+  flex: 5;
+  transition: all 0.7s ease-in-out;
+}
+
 /* chrome */
 /* html::-webkit-scrollbar {
   display: none;
