@@ -9,6 +9,7 @@ export default function Home() {
           <Link href="/introductory">GSAP ScrollTrigger</Link>
           <Link href="/infinite-scroll">Horizontal Infinite Scroll</Link>
           <Link href="/accordion">Accordion</Link>
+          <Link href="/vertical-scroll">Vertical Scroll</Link>
         </div>
       </div>
     </section>
