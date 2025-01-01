@@ -34,3 +34,8 @@
     @apply grid grid-flow-col gap-[2vw] w-min mt-[18vh] h-[50vh] auto-cols-[70vw] md:auto-cols-[30vw] xl:auto-cols-[18vw];
   }
 }
+
+.slide_current {
+  opacity: 1;
+  pointer-events: auto;
+}
