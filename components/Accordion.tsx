@@ -44,5 +44,3 @@ const Accordion = () => {
 };
 
 export default Accordion;
-
-//Comment
